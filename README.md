@@ -26,11 +26,16 @@ all_table_df = Tbqc.multiplepage(page_start=34, page_end=47, url="http://www.fsv
 ```
 ![image](https://github.com/dapingtai/Tw-Bartender-Quizdata-crawler/blob/master/coding_record/CleanTable.jpg)
 - Step3: Putting in postgreSQL with `to_postgresql()`
-Inputdata: Your transform data making by step2
-User: Your postgreSQL username
-Password: Your postgreSQL password
-Host/Port: Your postgreSQL IP/Port
-DB: Your DB name
+
+ Inputdata: Your transform data making by step2
+ 
+ User: Your postgreSQL username
+ 
+ Password: Your postgreSQL password
+ 
+ Host/Port: Your postgreSQL IP/Port
+ 
+ DB: Your DB name
 ```
 Tbqc.to_postgresql(inputdata=new_table_df, user, password, host, port, db)
 ```
