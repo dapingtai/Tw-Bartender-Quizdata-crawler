@@ -6,7 +6,7 @@ from sqlalchemy import Table, Column, ForeignKey, Integer, String, VARCHAR
 import psycopg2
 
 class Tbqc():
-    def pdfextrat(url,page="http://www.fsvs.ks.edu.tw/ezfiles/1/1001/img/58/206002.pdf"):
+    def pdfextrat(url="http://www.fsvs.ks.edu.tw/ezfiles/0/1001/img/58/206002.pdf",page=34):
         tables=camelot.read_pdf(url, pages=str(page),flavor="stream")
         print("Analysis Alchole PDF.....")
         print(tables[0])
