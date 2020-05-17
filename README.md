@@ -5,13 +5,14 @@ The crawler of Taiwan bartender make you get newest quiz data
 # Qucik Start
 ```
 pip install Tbqc
-import Tbqc
+from Tbqc import Tbqc
 ```
 # Usage
 - Step1: Crawler Taiwan Bartender Quiz Table with `pdfextrat()`
 ```
-table_df = Tbqc.pdfextrat(url="http://www.fsvs.ks.edu.tw/ezfiles/0/1001/img/58/206002.pdf", page=34)
+table_df = Tbqc.pdfextrat(url="http://www.fsvs.ks.edu.tw/ezfiles/1/1001/img/58/206002.pdf", page=34)
 ```
+![image](https://github.com/dapingtai/Tw-Bartender-Quizdata-crawler/blob/master/coding_record/Rawdata.jpg)
 - Step2: Transform Clean Table with `table_transform()`
 ```
 new_table_df = Tbqc.table_transform(table_df)
@@ -22,8 +23,9 @@ new_table_df = Tbqc.table_transform(table_df)
 
 page_start/page_end=47: Crawler PDF page start to end
 ```
-all_table_df = Tbqc.multiplepage(page_start=34, page_end=47, url="http://www.fsvs.ks.edu.tw/ezfiles/0/1001/img/58/206002.pdf")
+all_table_df = Tbqc.multiplepage(page_start=34, page_end=47, url="http://www.fsvs.ks.edu.tw/ezfiles/1/1001/img/58/206002.pdf")
 ```
+![image](https://github.com/dapingtai/Tw-Bartender-Quizdata-crawler/blob/master/coding_record/MutipleClean.jpg)
 ![image](https://github.com/dapingtai/Tw-Bartender-Quizdata-crawler/blob/master/coding_record/CleanTable.jpg)
 - Step3: Putting in postgreSQL with `to_postgresql()`
 
